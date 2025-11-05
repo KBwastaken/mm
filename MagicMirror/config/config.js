@@ -1,111 +1,202 @@
-/* Config Sample
- *
- * For more information on how you can configure this file
- * see https://docs.magicmirror.builders/configuration/introduction.html
- * and https://docs.magicmirror.builders/modules/configuration.html
- *
- * You can use environment variables using a `config.js.template` file instead of `config.js`
- * which will be converted to `config.js` while starting. For more information
- * see https://docs.magicmirror.builders/configuration/introduction.html#enviromnent-variables
+/* MagicMirror² Config - Nederlandse versie
+ * LET OP: Gebruik géén echte secrets in dit bestand als het gedeeld of gecommit wordt.
+ * Maak desnoods een config.js.template + environment variables.
  */
+
 let config = {
-	address: "localhost",	// Address to listen on, can be:
-							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
-							// - another specific IPv4/6 to listen on a specific interface
-							// - "0.0.0.0", "::" to listen on any interface
-							// Default, when address config is left out or empty, is "localhost"
+	// LAN toegang? Verander desgewenst naar "0.0.0.0" en pas ipWhitelist aan.
+	address: "localhost",
 	port: 8080,
-	basePath: "/",	// The URL path where MagicMirrorÂ² is hosted. If you are using a Reverse proxy
-									// you must set the sub path here. basePath must end with a /
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],	// Set [] to allow all IP addresses
-									// or add a specific IPv4 of 192.168.1.5 :
-									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
-									// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
-									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+	basePath: "/",
 
-	useHttps: false,			// Support HTTPS or not, default "false" will use HTTP
-	httpsPrivateKey: "",	// HTTPS private key path, only require when useHttps is true
-	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
+	// Leeg array [] = alle IP's toestaan (niet veilig buiten je eigen netwerk).
+	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],
+	// ipWhitelist: [],
 
-	language: "en",
-	locale: "en-US",   // this variable is provided as a consistent location
-			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
-			   // as we have no usage, we  have no constraints on what this field holds
-			   // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
+	useHttps: false,
+	httpsPrivateKey: "",
+	httpsCertificate: "",
 
-	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
+	language: "nl",
+	locale: "nl-NL",
+	logLevel: ["INFO", "LOG", "WARN", "ERROR"],
 	timeFormat: 24,
 	units: "metric",
 
 	modules: [
-		{
-			module: "alert",
-		},
+		{ module: "alert" },
+
+
+
 		{
 			module: "updatenotification",
 			position: "top_bar"
 		},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				dateFormat: "dddd D MMMM",
+				showWeek: true,
+				weekSymbol: "Week"
+			}
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			header: "Feestdagen (NL)",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
-						fetchInterval: 7 * 24 * 60 * 60 * 1000,
-						symbol: "calendar-check",
-						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics"
+						symbol: "calendar-days",
+						url: "https://calendar.google.com/calendar/ical/nl.dutch%23holiday%40group.v.calendar.google.com/public/basic.ics",
+						fetchInterval: 6 * 60 * 60 * 1000
 					}
 				]
 			}
 		},
 		{
-			module: "compliments",
-			position: "lower_third"
+  module: "compliments",
+  position: "bottom_bar",
+  classes: "thin xsmall",
+  config: {
+    updateInterval: 20000,
+    fadeSpeed: 4000,
+    compliments: {
+
+      anytime: [
+        "Je bent goed bezig.",
+        "Vandaag wordt een mooie dag.",
+        "Blijf lachen, dat staat je goed.",
+        "Kleine stapjes zijn ook vooruitgang.",
+        "You’ve got this.",
+        "Wees trots op jezelf.",
+        "PIE is de beste!",
+        "Altijd iets nieuws om te leren hier.",
+        "Je maakt iets moois, echt waar.",
+        "Leren door te doen, dat is PIE.",
+        "Samen sterk, samen slim.",
+        "Elke dag iets beter, dat is de spirit.",
+        "Fouten maken mag, zolang je blijft proberen.",
+        "Zonder jou is het lokaal niet compleet.",
+        "You’re part of the team.",
+        "PIE staat nooit stil.",
+        "Even lachen hoort erbij.",
+        "Blijf nieuwsgierig, dat is hoe dingen ontstaan.",
+        "Iedere dag een stukje vakmanschap.",
+        "Je doet meer dan je denkt."
+      ],
+
+      weekday: [
+        "PIE power vandaag!",
+        "Je bent slimmer dan je denkt.",
+        "Teamwork makes the dream work.",
+        "Maak er samen iets moois van vandaag.",
+        "Elke dag leer je iets nieuws.",
+        "Leren is groeien, en groeien is mooi.",
+        "Fouten zijn gewoon oefenmomenten.",
+        "Vandaag is een kans om iets nieuws te proberen.",
+        "Durf vragen te stellen, dat is kracht.",
+        "Iedereen begint ergens, ook de besten.",
+        "PIE draait om doen, niet alleen denken.",
+        "Kijk eens hoe ver je al bent gekomen.",
+        "Je hoeft het niet perfect te doen, als je maar probeert.",
+        "We doen het samen, net als in de werkplaats.",
+        "Hou vol, de pauze komt eraan.",
+        "Elk idee telt.",
+        "Wat jij vandaag maakt, inspireert morgen iemand anders.",
+        "Vakmanschap = trots.",
+        "Je mag best trots zijn op wat je bouwt.",
+        "Ook docenten hebben koffie nodig 😉"
+      ],
+
+      morning: [
+        "Goedemorgen! Tijd om te knallen.",
+        "Een nieuw begin, maak er iets moois van.",
+        "Coffee first, dan de wereld aan.",
+        "Rise and shine, het is een nieuwe dag!",
+        "PIE staat klaar om te bouwen!"
+      ],
+
+      afternoon: [
+        "Goed bezig vandaag!",
+        "Even ademhalen... je doet het goed.",
+        "Hou vol, je bent er bijna.",
+        "Een korte pauze doet wonderen.",
+        "Wat een productie vandaag, PIE-team!"
+      ],
+
+      evening: [
+        "Wat een dag! Trots op je inzet.",
+        "Geniet van je avond, dat heb je verdiend.",
+        "Rust goed uit, morgen weer kansen.",
+        "Vakmanschap kost energie, neem je rust."
+      ],
+
+      // Dutch Holidays & Events
+      "01-01": ["Gelukkig Nieuwjaar!", "Nieuw jaar, nieuwe kansen."],
+      "14-02": ["Fijne Valentijnsdag!", "Liefde hangt in de lucht ❤️"],
+      "27-04": ["Fijne Koningsdag!", "Oranje boven! 👑"],
+      "05-05": ["Bevrijdingsdag!", "Vrijheid is iets om te vieren."],
+      "04-05": ["Dodenherdenking", "Even stilstaan bij wat echt telt."],
+      "31-10": ["Happy Halloween!", "Spooky vibes vandaag 👻", "Pas op voor de pompoenen..."],
+      "05-12": ["Fijne Sinterklaasavond!", "Hopelijk zit er iets lekkers in je schoen 🎁"],
+      "25-12": ["Fijne Kerst!", "Warme dagen, koude chocola ☕️", "Spread wat liefde vandaag."],
+      "26-12": ["Tweede Kerstdag, relax en geniet."],
+      "01-09": ["Nieuw schooljaar, nieuwe start!", "Welkom terug bij PIE!"],
+      "10-07": ["Bijna vakantie!", "Nog even volhouden, je bent er bijna."],
+
+      weekend: [
+        "Weekend! Tijd om te ontspannen.",
+        "Je hebt het verdiend, geniet van je vrije tijd.",
+        "Rust goed uit, maandag weer bouwen 😉"
+      ]
+  }
+},
+
 		},
+
 		{
 			module: "weather",
 			position: "top_right",
 			config: {
 				weatherProvider: "openmeteo",
 				type: "current",
-				lat: 40.776676,
-				lon: -73.971321
+				lat: 52.4600,
+				lon: 4.6150,
 			}
 		},
 		{
 			module: "weather",
 			position: "top_right",
-			header: "Weather Forecast",
+			header: "Weer Voorspelling",
 			config: {
 				weatherProvider: "openmeteo",
 				type: "forecast",
-				lat: 40.776676,
-				lon: -73.971321
+				lat: 52.4600,
+				lon: 4.6150,
 			}
 		},
+
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
+			header: "Nieuws",
 			config: {
 				feeds: [
-					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
+					{ title: "NU.nl", url: "https://www.nu.nl/rss/Algemeen" },
 				],
 				showSourceTitle: true,
 				showPublishDate: true,
 				broadcastNewsFeeds: true,
-				broadcastNewsUpdates: true
+				broadcastNewsUpdates: true,
+				updateInterval: 10 * 60 * 1000
 			}
-		},
+		}
+
+		// Voeg later extra modules toe (bijv. MMM-Remote-Control, MMM-SystemStats, MMM-Traffic).
 	]
 };
 
-/*************** DO NOT EDIT THE LINE BELOW ***************/
+/*************** NIET DE REGEL HIERONDER AANPASSEN ***************/
 if (typeof module !== "undefined") { module.exports = config; }
