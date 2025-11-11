@@ -26,8 +26,6 @@ let config = {
 	modules: [
 		{ module: "alert" },
 
-
-
 		{
 			module: "updatenotification",
 			position: "top_bar"
@@ -56,104 +54,105 @@ let config = {
 			}
 		},
 		{
-  module: "compliments",
-  position: "bottom_bar",
-  classes: "thin xsmall",
-  config: {
-    updateInterval: 20000,
-    fadeSpeed: 4000,
-    compliments: {
+			module: "compliments",
+			position: "bottom_bar",
+			classes: "thin xsmall",
+			config: {
+				updateInterval: 20000,
+				fadeSpeed: 4000,
+				compliments: {
 
-      anytime: [
-        "Je bent goed bezig.",
-        "Vandaag wordt een mooie dag.",
-        "Blijf lachen, dat staat je goed.",
-        "Kleine stapjes zijn ook vooruitgang.",
-        "You’ve got this.",
-        "Wees trots op jezelf.",
-        "PIE is de beste!",
-        "Altijd iets nieuws om te leren hier.",
-        "Je maakt iets moois, echt waar.",
-        "Leren door te doen, dat is PIE.",
-        "Samen sterk, samen slim.",
-        "Elke dag iets beter, dat is de spirit.",
-        "Fouten maken mag, zolang je blijft proberen.",
-        "Zonder jou is het lokaal niet compleet.",
-        "You’re part of the team.",
-        "PIE staat nooit stil.",
-        "Even lachen hoort erbij.",
-        "Blijf nieuwsgierig, dat is hoe dingen ontstaan.",
-        "Iedere dag een stukje vakmanschap.",
-        "Je doet meer dan je denkt."
-      ],
+					anytime: [
+						"Je bent goed bezig.",
+						"Vandaag wordt een mooie dag.",
+						"Blijf lachen, dat staat je goed.",
+						"Kleine stapjes zijn ook vooruitgang.",
+						"You've got this.",
+						"Wees trots op jezelf.",
+						"PIE is de beste!",
+						"Altijd iets nieuws om te leren hier.",
+						"Je maakt iets moois, echt waar.",
+						"Leren door te doen, dat is PIE.",
+						"Samen sterk, samen slim.",
+						"Elke dag iets beter, dat is de spirit.",
+						"Fouten maken mag, zolang je blijft proberen.",
+						"Zonder jou is het lokaal niet compleet.",
+						"You're part of the team.",
+						"PIE staat nooit stil.",
+						"Even lachen hoort erbij.",
+						"Blijf nieuwsgierig, dat is hoe dingen ontstaan.",
+						"Iedere dag een stukje vakmanschap.",
+						"Je doet meer dan je denkt."
+					],
 
-      weekday: [
-        "PIE power vandaag!",
-        "Je bent slimmer dan je denkt.",
-        "Teamwork makes the dream work.",
-        "Maak er samen iets moois van vandaag.",
-        "Elke dag leer je iets nieuws.",
-        "Leren is groeien, en groeien is mooi.",
-        "Fouten zijn gewoon oefenmomenten.",
-        "Vandaag is een kans om iets nieuws te proberen.",
-        "Durf vragen te stellen, dat is kracht.",
-        "Iedereen begint ergens, ook de besten.",
-        "PIE draait om doen, niet alleen denken.",
-        "Kijk eens hoe ver je al bent gekomen.",
-        "Je hoeft het niet perfect te doen, als je maar probeert.",
-        "We doen het samen, net als in de werkplaats.",
-        "Hou vol, de pauze komt eraan.",
-        "Elk idee telt.",
-        "Wat jij vandaag maakt, inspireert morgen iemand anders.",
-        "Vakmanschap = trots.",
-        "Je mag best trots zijn op wat je bouwt.",
-        "Ook docenten hebben koffie nodig 😉"
-      ],
+					weekday: [
+						"PIE power vandaag!",
+						"Je bent slimmer dan je denkt.",
+						"Teamwork makes the dream work.",
+						"Maak er samen iets moois van vandaag.",
+						"Elke dag leer je iets nieuws.",
+						"Leren is groeien, en groeien is mooi.",
+						"Fouten zijn gewoon oefenmomenten.",
+						"Vandaag is een kans om iets nieuws te proberen.",
+						"Durf vragen te stellen, dat is kracht.",
+						"Iedereen begint ergens, ook de besten.",
+						"PIE draait om doen, niet alleen denken.",
+						"Kijk eens hoe ver je al bent gekomen.",
+						"Je hoeft het niet perfect te doen, als je maar probeert.",
+						"We doen het samen, net als in de werkplaats.",
+						"Hou vol, de pauze komt eraan.",
+						"Elk idee telt.",
+						"Wat jij vandaag maakt, inspireert morgen iemand anders.",
+						"Vakmanschap = trots.",
+						"Je mag best trots zijn op wat je bouwt.",
+						"Ook docenten hebben koffie nodig 😉"
+					],
 
-      morning: [
-        "Goedemorgen! Tijd om te knallen.",
-        "Een nieuw begin, maak er iets moois van.",
-        "Coffee first, dan de wereld aan.",
-        "Rise and shine, het is een nieuwe dag!",
-        "PIE staat klaar om te bouwen!"
-      ],
+					morning: [
+						"Goedemorgen! Tijd om te knallen.",
+						"Een nieuw begin, maak er iets moois van.",
+						"Coffee first, dan de wereld aan.",
+						"Rise and shine, het is een nieuwe dag!",
+						"PIE staat klaar om te bouwen!"
+					],
 
-      afternoon: [
-        "Goed bezig vandaag!",
-        "Even ademhalen... je doet het goed.",
-        "Hou vol, je bent er bijna.",
-        "Een korte pauze doet wonderen.",
-        "Wat een productie vandaag, PIE-team!"
-      ],
+					afternoon: [
+						"Goed bezig vandaag!",
+						"Even ademhalen... je doet het goed.",
+						"Hou vol, je bent er bijna.",
+						"Een korte pauze doet wonderen.",
+						"Wat een productie vandaag, PIE-team!"
+					],
 
-      evening: [
-        "Wat een dag! Trots op je inzet.",
-        "Geniet van je avond, dat heb je verdiend.",
-        "Rust goed uit, morgen weer kansen.",
-        "Vakmanschap kost energie, neem je rust."
-      ],
+					evening: [
+						"Wat een dag! Trots op je inzet.",
+						"Geniet van je avond, dat heb je verdiend.",
+						"Rust goed uit, morgen weer kansen.",
+						"Vakmanschap kost energie, neem je rust."
+					],
 
-      // Dutch Holidays & Events
-      "01-01": ["Gelukkig Nieuwjaar!", "Nieuw jaar, nieuwe kansen."],
-      "14-02": ["Fijne Valentijnsdag!", "Liefde hangt in de lucht ❤️"],
-      "27-04": ["Fijne Koningsdag!", "Oranje boven! 👑"],
-      "05-05": ["Bevrijdingsdag!", "Vrijheid is iets om te vieren."],
-      "04-05": ["Dodenherdenking", "Even stilstaan bij wat echt telt."],
-      "31-10": ["Happy Halloween!", "Spooky vibes vandaag 👻", "Pas op voor de pompoenen..."],
-      "05-12": ["Fijne Sinterklaasavond!", "Hopelijk zit er iets lekkers in je schoen 🎁"],
-      "25-12": ["Fijne Kerst!", "Warme dagen, koude chocola ☕️", "Spread wat liefde vandaag."],
-      "26-12": ["Tweede Kerstdag, relax en geniet."],
-      "01-09": ["Nieuw schooljaar, nieuwe start!", "Welkom terug bij PIE!"],
-      "10-07": ["Bijna vakantie!", "Nog even volhouden, je bent er bijna."],
+					// Dutch Holidays & Events
+					"01-01": ["Gelukkig Nieuwjaar!", "Nieuw jaar, nieuwe kansen."],
+					"14-02": ["Fijne Valentijnsdag!", "Liefde hangt in de lucht ❤️"],
+					"27-04": ["Fijne Koningsdag!", "Oranje boven! 👑"],
+					"05-05": ["Bevrijdingsdag!", "Vrijheid is iets om te vieren."],
+					"04-05": ["Dodenherdenking", "Even stilstaan bij wat echt telt."],
+					"31-10": ["Happy Halloween!", "Spooky vibes vandaag 👻", "Pas op voor de pompoenen..."],
+					"05-12": ["Fijne Sinterklaasavond!", "Hopelijk zit er iets lekkers in je schoen 🎁"],
+					"25-12": ["Fijne Kerst!", "Warme dagen, koude chocola ☕️", "Spread wat liefde vandaag."],
+					"26-12": ["Tweede Kerstdag, relax en geniet."],
+					"01-09": ["Nieuw schooljaar, nieuwe start!", "Welkom terug bij PIE!"],
+					"10-07": ["Bijna vakantie!", "Nog even volhouden, je bent er bijna."],
 
-      weekend: [
-        "Weekend! Tijd om te ontspannen.",
-        "Je hebt het verdiend, geniet van je vrije tijd.",
-        "Rust goed uit, maandag weer bouwen 😉"
-      ]
-    }
-  },
-  {
+					weekend: [
+						"Weekend! Tijd om te ontspannen.",
+						"Je hebt het verdiend, geniet van je vrije tijd.",
+						"Rust goed uit, maandag weer bouwen 😉"
+					]
+				}
+			}
+		},
+		{
 			module: "weather",
 			position: "top_right",
 			config: {
