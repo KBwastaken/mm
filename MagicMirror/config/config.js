@@ -151,12 +151,9 @@ let config = {
         "Je hebt het verdiend, geniet van je vrije tijd.",
         "Rust goed uit, maandag weer bouwen 😉"
       ]
-  }
-},
-
-		},
-
-		{
+    }
+  },
+  {
 			module: "weather",
 			position: "top_right",
 			config: {
