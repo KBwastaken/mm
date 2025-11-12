@@ -1,5 +1,14 @@
-#tcv-logo {
-  position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-  width: 200px; height: auto; z-index: 999; pointer-events: none;
+/* Size and spacing for the top-center logo */
+.tcv-logo {
+  height: 80px;   /* adjust as needed */
+  width: auto;
+  margin-top: 6px;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
 }
-#tcv-logo { content: url("/public/tcv.png"); }
+
+/* If you want to ensure it never stretches too big on small screens */
+@media (max-width: 800px) {
+  .tcv-logo {
+    height: 60px;
+  }
+}
