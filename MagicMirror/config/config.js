@@ -171,6 +171,12 @@ let config = {
 				type: "forecast",
 				lat: 52.4600,
 				lon: 4.6150,
+				colored: true,
+				maxNumberOfDays: 7,
+				fadePoint: 0.75
+				
+				
+			
 			}
 		},
 
