@@ -39,6 +39,14 @@ let config = {
 				weekSymbol: "Week"
 			}
 		},
+{
+  module: "helloworld",
+  position: "top_center", // or "upper_third" if you want it lower
+  config: {
+    text: '<img src="public/tcv.png" class="tcv-logo" alt="TCV Logo" />'
+  }
+},
+		
 		{
 			module: "calendar",
 			header: "Feestdagen (NL)",
