@@ -69,6 +69,7 @@ let config = {
 			config: {
 				updateInterval: 20000,
 				fadeSpeed: 4000,
+				specialDayUnique: true,
 				compliments: {
 
 					anytime: [
@@ -92,9 +93,6 @@ let config = {
 						"Blijf nieuwsgierig, dat is hoe dingen ontstaan.",
 						"Iedere dag een stukje vakmanschap.",
 						"Je doet meer dan je denkt."
-					],
-
-					weekday: [
 						"PIE power vandaag!",
 						"Je bent slimmer dan je denkt.",
 						"Teamwork makes the dream work.",
