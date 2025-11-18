@@ -1,14 +1,20 @@
-/* Size and spacing for the top-center logo */
-.tcv-logo {
-  height: 80px;   /* adjust as needed */
-  width: auto;
-  margin-top: 6px;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
+/* TCV logo background for top_center */
+.tcv-logo-bg {
+  width: 220px;                 /* adjust width as needed */
+  height: 80px;                 /* adjust height as needed */
+  background-image: url('/css/tcv.png?v=1');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;     /* keeps aspect ratio */
+  margin: 6px auto 0 auto;
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.35));
 }
 
-/* If you want to ensure it never stretches too big on small screens */
+/* Smaller screens */
 @media (max-width: 800px) {
-  .tcv-logo {
+  .tcv-logo-bg {
+    width: 160px;
     height: 60px;
   }
 }
