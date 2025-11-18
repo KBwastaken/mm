@@ -92,7 +92,7 @@ let config = {
 						"Even lachen hoort erbij.",
 						"Blijf nieuwsgierig, dat is hoe dingen ontstaan.",
 						"Iedere dag een stukje vakmanschap.",
-						"Je doet meer dan je denkt."
+						"Je doet meer dan je denkt.",
 						"PIE power vandaag!",
 						"Je bent slimmer dan je denkt.",
 						"Teamwork makes the dream work.",
