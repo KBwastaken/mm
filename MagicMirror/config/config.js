@@ -46,7 +46,6 @@ let config = {
     // we use a div with a background-image so the browser renders it as CSS background
     text: '<div class="tcv-logo-bg" role="img" aria-label="TCV Logo"></div>'
   }
-}
 },
 		
 		{
