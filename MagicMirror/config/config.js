@@ -41,10 +41,12 @@ let config = {
 		},
 {
   module: "helloworld",
-  position: "top_center", // or "upper_third" if you want it lower
+  position: "top_center",
   config: {
-    text: '<img src="public/tcv.png" class="tcv-logo" alt="TCV Logo" />'
+    // we use a div with a background-image so the browser renders it as CSS background
+    text: '<div class="tcv-logo-bg" role="img" aria-label="TCV Logo"></div>'
   }
+}
 },
 		
 		{
